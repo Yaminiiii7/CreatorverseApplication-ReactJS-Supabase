@@ -1,16 +1,115 @@
-# React + Vite
+🌟 Creatorverse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Creatorverse is a full-stack React application that allows users to create, view, update, and delete their favorite content creators. These creators can be YouTubers, Twitch streamers, TikTok personalities, Instagram creators, or any online content producer worth following.
 
-Currently, two official plugins are available:
+The app serves as a personal directory of creators, giving users full CRUD (Create, Read, Update, Delete) functionality through a clean and intuitive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
+Core Features
 
-## React Compiler
+View a list of all content creators on the homepage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Each creator includes:
 
-## Expanding the ESLint configuration
+Name
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Channel or profile URL
+
+Short description
+
+Optional image URL
+
+Click on a creator to view detailed information
+
+Add a new content creator using a form
+
+Edit an existing creator’s name, URL, description, or image
+
+Delete a content creator with confirmation
+
+Each creator has a unique route and URL
+
+Technical Features
+
+Built with React and Vite
+
+Client-side routing using React Router
+
+Database and backend powered by Supabase
+
+API calls implemented using async/await
+
+State managed using React hooks (useState, useEffect)
+
+Environment variables used to securely store Supabase credentials
+
+🧱 Tech Stack
+
+Frontend: React, Vite
+
+Routing: React Router DOM
+
+Backend / Database: Supabase
+
+Styling: Basic CSS (optional PicoCSS support)
+
+API Communication: Supabase JavaScript Client
+
+📂 Project Structure
+src/
+│── components/
+│   └── Card.jsx
+│── pages/
+│   ├── ShowCreators.jsx
+│   ├── ViewCreator.jsx
+│   ├── AddCreator.jsx
+│   ├── EditCreator.jsx
+│   └── DeleteCreator.jsx
+│── client.js
+│── App.jsx
+│── main.jsx
+
+⚙️ Getting Started
+1. Install dependencies
+npm install
+
+2. Create a .env file
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+3. Start the development server
+npm run dev
+
+🗄️ Database Setup
+
+Supabase table: creators
+
+Columns:
+
+id (auto-generated)
+
+name (text)
+
+url (text)
+
+description (text)
+
+imageURL (text, optional)
+
+Row Level Security is disabled for simplicity, and realtime updates are enabled.
+
+✨ Future Improvements
+
+Add authentication for user-specific creator lists
+
+Improve UI styling with PicoCSS or Tailwind
+
+Add search and filtering functionality
+
+Add image previews and validation
+
+Add loading and error states
+
+🧑‍🚀 Author
+
+Built as part of the WEB103 Creatorverse Project to demonstrate full CRUD functionality using React and Supabase.
