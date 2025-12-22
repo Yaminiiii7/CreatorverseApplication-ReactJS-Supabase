@@ -1,11 +1,11 @@
-import { useParams } from "react-router"
-import {supabase} from '../client.js'
-import {useEffect,useState} from 'react'
-import {Link} from "react-router"
+import { useParams, Link } from "react-router-dom"
+import { supabase } from '../client.js'
+import { useEffect, useState } from 'react'
+import { FaTrash, FaEdit, FaYoutube, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 function ViewCreator() {
-  const {id}=useParams()
-  const [creator,setCreator]=useState([])
+  const { id } = useParams()
+  const [creator, setCreator] = useState(null)
 
   useEffect(()=>{
     const fetchCreator=async ()=>{
@@ -17,26 +17,37 @@ function ViewCreator() {
         console.log(error)
         return;
       }      
-      setCreator(data[0])
+      setCreator(data?.[0] ?? null)
     }
     fetchCreator();
   },[id])
-
+  
   return (
     <div>
-      ViewCreator
-      {
-        creator &&
-          <ul>
-            <li>{creator.id}</li>
-            <li>{creator.description}</li>
-            <li>{creator.imageURL}</li>
-            <li>{creator.name}</li>          
-            <Link to={`/view/${creator.id}`} key={creator.id}>View</Link>
-            <Link to={`/edit/${creator.id}`} key={creator.id}>Edit</Link>
-            <Link to={`/delete/${creator.id}`} key={creator.id}>Delete</Link>
-          </ul>
-      }
+
+      {creator ? (
+        <ul>
+
+          {creator.description}
+          <img src={creator.imageURL} alt={creator.name || "creator image"} height="200" width="200"/>
+          {creator.name}
+          
+            <a href={creator.Youtubeurl} target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+          
+          
+            <a href={creator.Instagramurl} target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+          
+          
+            <a href={creator.Twitterurl} target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+          
+          
+            <Link to={`/edit/${creator.id}`}><FaEdit/></Link>
+            <Link to={`/delete/${creator.id}`}><FaTrash/></Link>
+          
+        </ul>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   )
 }
