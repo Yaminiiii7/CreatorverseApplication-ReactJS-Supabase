@@ -56,6 +56,7 @@ Styling: Basic CSS (optional PicoCSS support)
 API Communication: Supabase JavaScript Client
 
 📂 Project Structure
+```
 src/
 │── components/
 │   └── Card.jsx
@@ -68,7 +69,7 @@ src/
 │── client.js
 │── App.jsx
 │── main.jsx
-
+```
 ⚙️ Getting Started
 1. Install dependencies
 npm install
