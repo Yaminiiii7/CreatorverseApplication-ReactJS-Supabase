@@ -1,46 +1,61 @@
-🌟 Creatorverse
+# WEB103 Prework - *👉🏿 Creatorverse application*
 
-Creatorverse is a full-stack React application that allows users to create, view, update, and delete their favorite content creators. These creators can be YouTubers, Twitch streamers, TikTok personalities, Instagram creators, or any online content producer worth following.
+Submitted by: **👉🏿 Yamini Mandadi**
 
-The app serves as a personal directory of creators, giving users full CRUD (Create, Read, Update, Delete) functionality through a clean and intuitive interface.
+About this web app: **👉🏿 Creatorverse is a full-stack React application that allows users to create, view, update, and delete their favorite content creators. These creators can be YouTubers, Twitch streamers, TikTok personalities, Instagram creators, or any online content producer worth following.
 
-🚀 Features
-Core Features
+The app serves as a personal directory of creators, giving users full CRUD (Create, Read, Update, Delete) functionality through a clean and intuitive interface.**
 
-View a list of all content creators on the homepage
+Time spent: **👉🏿 15** hours
 
-Each creator includes:
+## Required Features
 
-Name
+The following **required** functionality is completed:
 
-Channel or profile URL
+<!-- 👉🏿👉🏿👉🏿 Make sure to check off completed functionality below -->
+- [*] **A logical component structure in React is used to create the frontend of the app**
+- [*] **At least five content creators are displayed on the homepage of the app**
+- [*] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
+- [*] **API calls use the async/await design pattern via Axios or fetch()**
+- [] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
+- [*] **Each content creator has their own unique URL**
+- [*] **The user can edit a content creator to change their name, url, or description**
+- [*] **The user can delete a content creator**
+- [*] **The user can add a new content creator by entering a name, url, or description and then it is displayed on the homepage**
 
-Short description
+The following **optional** features are implemented:
 
-Optional image URL
+- [ ] Picocss is used to style HTML elements
+- [ ] The content creator items are displayed in a creative format, like cards instead of a list
+- [ ] An image of each content creator is shown on their content creator card
 
-Click on a creator to view detailed information
+The following **additional** features are implemented:
 
-Add a new content creator using a form
+* [ ] List anything else that you added to improve the site's functionality!
 
-Edit an existing creator’s name, URL, description, or image
+## Video Walkthrough
 
-Delete a content creator with confirmation
+Here's a walkthrough of implemented required features:
 
-Each creator has a unique route and URL
+👉🏿<img src='https://youtu.be/dL0kDg_rxfo' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-Technical Features
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  👉🏿 GIF tool here
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
-Built with React and Vite
 
-Client-side routing using React Router
+## License
 
-Database and backend powered by Supabase
+Copyright [👉🏿 2026] [👉🏿 Yamini Mandadi]
 
-API calls implemented using async/await
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-State managed using React hooks (useState, useEffect)
+> http://www.apache.org/licenses/LICENSE-2.0
 
+<<<<<<< HEAD
 Environment variables used to securely store Supabase credentials
 
 🧱 Tech Stack
@@ -114,3 +129,6 @@ Add loading and error states
 🧑‍🚀 Author
 
 Built as part of the WEB103 Creatorverse Project to demonstrate full CRUD functionality using React and Supabase.
+=======
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+>>>>>>> d8d4cfc ('adding_readme')
